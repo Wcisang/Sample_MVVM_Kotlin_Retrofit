@@ -4,6 +4,7 @@ import io.reactivex.Flowable
 import retrofit2.http.GET
 import retrofit2.http.Query
 import wrproject.com.sample_mvvm.model.News
+import wrproject.com.sample_mvvm.model.NewsArticles
 
 
 /**
@@ -12,5 +13,5 @@ import wrproject.com.sample_mvvm.model.News
 interface NewsService {
 
     @GET("/v2/top-headlines")
-    fun getRemoteNews(@Query("country")country: String, @Query("apiKey")apiKey : String): Flowable<List<News>>
+    fun getRemoteNews(@Query("country")country: String, @Query("apiKey")apiKey : String): Flowable<NewsArticles>
 }
